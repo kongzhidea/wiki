@@ -5,12 +5,14 @@
 * apt-get install python-dev   
 * sudo apt-get install libmysqlclient-dev
 * 再安装mysql-python模块
+* 执行更新操作后需要commit
 
 
 # 推荐PyMySql
 * https://github.com/kongzhidea/PyMySQL
 * python版本2.7
 * sudo python setup.py install
+* 执行更新操作后需要commit
 ```
 样例1：
 # -*- coding: utf8 -*-
