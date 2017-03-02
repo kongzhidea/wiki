@@ -17,6 +17,7 @@ class MysqlUtil:
     def close(self):
         self.con.close()
 
+    #如果是修改操作，需要execute后需要执行commit
     def execute(self,sql):
         cur = self.con.cursor()
         cur.execute(sql)
@@ -24,8 +25,8 @@ class MysqlUtil:
     def queryAll(self,sql,showsql = False):
         if showsql:
             print sql
-        cur = self.con.cursor()
-        #取数据
+        # cur = self.con.cursor()  #返回元祖
+        #取数据,返回dict
         cur = self.con.cursor(mdb.cursors.DictCursor)
         cur.execute(sql)
         #多行数据  使用fetchall
@@ -35,8 +36,8 @@ class MysqlUtil:
     def queryOne(self,sql,showsql = False):
         if showsql:
             print sql
-        cur = self.con.cursor()
-        #取数据
+        #cur = self.con.cursor() #返回元祖
+        #取数据，返回dict
         cur = self.con.cursor(mdb.cursors.DictCursor)
         cur.execute(sql)
         #多行数据  使用fetchall
