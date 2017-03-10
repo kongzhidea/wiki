@@ -5,7 +5,7 @@
 import smtplib
 from email.mime.text import MIMEText
 def sendmail():
-    sender='sender'
+    sender='sender'# 如果报错，则将sender将username保持一致
     receivers=['receivers']
     subject="邮件主题_test"
     username="sender@..com"
