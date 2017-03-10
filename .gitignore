@@ -34,3 +34,5 @@ classes
 *.war
 maven-archiver
 generated-sources
+
+*.pyc
