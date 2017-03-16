@@ -50,21 +50,21 @@ python中时间日期格式化符号：
 '''
 
 
-# date为struct_time类型，不传表示当前时间
+# date为struct_time类型，不传表示当前时间，返回日期str
 def defaultTime(date=None):
     if date:
         return time.strftime("%Y-%m-%d %H:%M:%S", date)
     else:
         return time.strftime("%Y-%m-%d %H:%M:%S")
 
-# date为struct_time类型，不传表示当前时间
+# date为struct_time类型，不传表示当前时间，返回时间str
 def defaultDate(date=None):
     if date:
         return time.strftime("%Y-%m-%d", date)
     else:
         return time.strftime("%Y-%m-%d")
 
-# date为struct_time类型，不传表示当前时间
+# date为struct_time类型，不传表示当前时间，返回str
 def format(date,format):
     return time.strftime(format, date)
 
