@@ -71,3 +71,7 @@ if __name__ == "__main__":
             print "parent is:"+ parent
             print "filename is:" + filename
             print "the full name of the file is:" + os.path.join(parent, filename)  # 输出文件路径信息
+
+    ## 登台控制台输入
+    str = raw_input("请输入：");
+    print "你输入的内容是: ", str
