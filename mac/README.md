@@ -105,6 +105,9 @@ command+h   隐藏当前界面。
 右键： 两根手指 一起点击，或者ctrl+单击
 
 光标移动： 移动到最左侧：ctrl+a， 移动到最右侧：ctrl+e
+清除当前输入命令  ctrl+u， 
+取消当前命令  ctrl+c
+删除当前输入命令最后一个单词 ctrl + w
 
 finder中  跳转到上一级：command+ 上
 
