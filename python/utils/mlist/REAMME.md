@@ -9,6 +9,14 @@ Python的元组与列表类似，不同之处在于元组的元素不能修改�
 ```
 help(list)
 
+遍历list
+for i in list:
+    print i
+
+同时遍历两个list
+for a,b in zip(list1,list2):
+    print a,b
+
 python中直接打印list会中文乱码，最好写一个方法来打印list:
 def showlist(l):
     print "[",
