@@ -85,7 +85,8 @@ chrome 下载内容： command+shift+j
 终端 打开新标签: command+t
 从桌面打开终端：command+t
 终端 窗口切换：  command+{， 按的时候：command+shift+[
-清除屏幕内容：  ctrl+l
+清除屏幕内容：  ctrl+l，或 Command + K 
+保存终端输出    Command + S 
 
 终端打开 finder：  open 命令，后面加路径，例如： open .
 finder打开终端：https://my.oschina.net/ioslighter/blog/359258?p={{totalPage}}
