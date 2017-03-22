@@ -1,5 +1,7 @@
 
 ```
+print isinstance({},dict)  # 判断是否是dict， {}返回true
+
 #定义dict
 dt = dict()
 dt = {}
