@@ -97,6 +97,9 @@ class DataAccessMgr:
             if args:
                 self.logger.info("args=" + str(args))
 
+    def close(self):
+        self.conn.close()
+
     # useGeneratedKeys=True 返回自增id
     def insert(self,sql,useGeneratedKeys=False):
         if self.logger:
