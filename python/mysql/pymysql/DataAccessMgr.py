@@ -31,6 +31,16 @@ print '{name} {age}'.format(age=22, name='管理员')
 print '{0} {1} {2}'.format('a', 'b', 'c')
 print '{} {} {}'.format('a', 'b', 'c')
 '''
+
+'''
+调用样例:
+
+from DataAccessMgr import DataAccessMgr
+
+client = DataAccessMgr(host=mysql_ip,user=mysql_username,passwd=mysql_password,database=mysql_database)
+print client.insert("insert into user(path,gmt_create) values('%s',now())" %("/k6"))
+client.show(client.queryAllObject("select * from user"))
+'''
 class DataAccessMgr:
     def __init__(self, host=None, user=None, passwd=None, database=None, port=3306, charset="utf8",logger=None):
         self.conn = pymysql.connect(host=host,
