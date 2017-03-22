@@ -10,7 +10,7 @@ print "{name} {sex}" .format(name="kong",sex="F")  ## key不能少
 print '{name} {age}'.format(age=22, name='管理员')
 
 print '{0} {1} {2}'.format('a', 'b', 'c')
-
+print '{} {} {}'.format('a', 'b', 'c')
 
 print '{array[2]}'.format(array=range(10))
 print '{attr.__class__}'.format(attr=0)
