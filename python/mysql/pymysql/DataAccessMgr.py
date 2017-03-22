@@ -2,6 +2,7 @@
 import pymysql.cursors
 import logging
 import sys
+import ConfigParser
 
 '''
 pymysql.cursors.DictCursor 返回dict格式
@@ -188,6 +189,27 @@ class DataAccessMgr:
         self.conn.commit()
         return c
 
+'''
+从配置文件解析， mysql.ini
+
+client = buildDataAccessMgr("aliyun.ini")
+
+[db]
+mysql_ip = ***
+mysql_username = ***
+mysql_password = ***
+mysql_database = ***
+'''
+def buildDataAccessMgr(filePath):
+    cf = ConfigParser.ConfigParser()
+    cf.read(filePath)
+
+    mysql_ip = cf.get("db", "mysql_ip")
+    mysql_username = cf.get("db", "mysql_username")
+    mysql_password = cf.get("db", "mysql_password")
+    mysql_database = cf.get("db", "mysql_database")
+
+    return DataAccessMgr(host=mysql_ip,user=mysql_username,passwd=mysql_password,database=mysql_database)
 
 def initlog(name=__file__, logfile = None):
     # 生成一个日志对象
