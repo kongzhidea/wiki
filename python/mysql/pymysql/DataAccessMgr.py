@@ -42,15 +42,17 @@ print client.insert("insert into user(path,gmt_create) values('%s',now())" %("/k
 client.show(client.queryAllObject("select * from user"))
 '''
 class DataAccessMgr:
-    def __init__(self, host=None, user=None, passwd=None, database=None, port=3306, charset="utf8",logger=None):
+    def __init__(self, host=None, user=None, passwd=None, database=None, port=3306, charset="utf8",logger=None, showSql=True):
         self.conn = pymysql.connect(host=host,
                              user=user,
                              password=passwd,
                              database=database,
                              port=port,
                              charset=charset)
-        if not logger:
+        if logger == None and showSql:
             self.logger = initlog("DataAccessMgr")
+        else:
+            self.logger = None
 
         return
 
