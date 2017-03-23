@@ -7,5 +7,6 @@ wget http://peak.telecommunity.com/dist/ez_setup.py
 2.使用python ez_setup.py 
 3.最后可以使用locate easy_install查看安装再那个目录下。 
 4.使用easy_install 查看命令是否可用，如果不可用可以讲路径加入到PATH中 
+5.可以修改 /usr/bin/easy_install 首行的python路径来更改指定python路径
 
 
