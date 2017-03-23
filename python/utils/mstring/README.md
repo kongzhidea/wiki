@@ -146,6 +146,8 @@ print("as2".islower())#判断字母是否全是小写
 print("as2".isupper()))#判断字母是否全是大写
 print("kong".startswith("k")))#判断是否以。。开头
 print("kong".endswith("g"))#判断是否以。。结尾
+
+isalpha对unicode字符无法识别，全部返回True，可以再转成str,如  str(u"孔").isalpha() = False
 ```
 
 #### 字符串对齐
