@@ -1,0 +1,55 @@
+
+# -*- coding: utf-8 -*-
+
+import redis
+
+print redis.__file__
+
+# 连接，可选不同数据库
+r = redis.Redis(host='localhost', port=6379)
+
+# -------------------------------------------
+def info():
+    global r
+    # 看信息
+    info = r.info()
+    for key in info:
+        print "%s: %s" % (key, info[key])
+
+def dbsize():
+    global r
+    # 查数据库大小
+    print '\ndbsize: %s' % r.dbsize()
+
+def _string():
+    global r
+    r.set("test","test_1")
+    print r.get("test")  #test_1
+
+    r.delete("test")
+    print r.get("test")   #None
+
+    print r.exists("test")    #False
+
+    print r.setex("test2","test_2",3)
+    print r.ttl("test2")  #如果不存在则返回None
+
+def _list():
+    global  r
+
+    r.delete("_list")
+    r.lpush("_list","a")
+    r.lpush("_list","0")
+    r.rpush("_list","b")
+
+    print r.llen("_list")
+    print r.lrange("_list",0,-1)
+
+if __name__ == "__main__":
+#    info()
+    dbsize()
+    _string()
+    _list()
+
+
+
