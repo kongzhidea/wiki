@@ -1,5 +1,5 @@
 
-### [21分钟 MySQL 入门教](http://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html)
+### [21分钟 MySQL 入门教程](http://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html)
 
 ## mysql启动和关闭
 ```
