@@ -192,7 +192,7 @@ class DataAccessMgr:
 '''
 从配置文件解析， mysql.ini
 
-client = buildDataAccessMgr("aliyun.ini")
+client = buildDataAccessMgr("db.ini")
 
 [db]
 mysql_ip = ***
