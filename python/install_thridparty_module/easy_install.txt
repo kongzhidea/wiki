@@ -9,5 +9,5 @@ wget http://peak.telecommunity.com/dist/ez_setup.py
 4.使用easy_install 查看命令是否可用，如果不可用可以讲路径加入到PATH中，easy_install redis
 5.可以修改 /usr/bin/easy_install 首行的python路径来更改指定python路径
 6.easy_install 安装模块指定版本,    如：easy_install "scikit-learn==0.18.1"
-
+7.如果本地有某模块，但是报找不到，可以先卸载，然后再安装，加上 --upgrade参数，如easy_install --upgrade SomePackage3
 
