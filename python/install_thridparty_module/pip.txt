@@ -1,0 +1,20 @@
+
+1.pip安装
+wget "https://pypi.python.org/packages/source/p/pip/pip-1.5.4.tar.gz#md5=834b2904f92d46aaa333267fb1c922bb" --no-check-certificate
+tar -zxvf pip-1.5.4.tar.gz
+cd pip-1.5.4
+
+sudo python setup.py install
+
+2.pip列出安装模块
+sudo pip list
+
+3.安装模块
+sudo pip install module
+
+要用 pip 安装指定版本的 Python 包，只需通过 == 操作符 指定,如：
+pip install robotframework==2.8.7
+
+4.卸载模块
+sudo pip uninstall module
+
