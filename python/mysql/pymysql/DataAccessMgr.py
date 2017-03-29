@@ -43,7 +43,7 @@ print client.insert("insert into user(path,gmt_create) values('%s',now())" %("/k
 client.show(client.queryAllObject("select * from user"))
 '''
 class DataAccessMgr:
-    def __init__(self, host=None, user=None, passwd=None, database=None, port=3306, charset="utf8",logger=None, showSql=True):
+    def __init__(self, host=None, user=None, passwd=None, database=None, port=3306, charset="utf8",logger=None, showSql=False):
         self.conn = pymysql.connect(host=host,
                              user=user,
                              password=passwd,
