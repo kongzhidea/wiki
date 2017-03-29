@@ -7,6 +7,7 @@
 * 再安装mysql-python模块
 * 执行更新操作后需要commit
 
+#[mycli,python连接mysql客户端](https://github.com/dbcli/mycli)
 
 # 推荐PyMySql
 * https://github.com/kongzhidea/PyMySQL
