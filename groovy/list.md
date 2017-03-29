@@ -37,18 +37,23 @@ collect=collect-'a'         //在集合中减去元素a(全部a)
 numbers.join(",")
 
 8.
-[2,5,7].pop()              //Result: 7 
+[2,5,7].pop()              //删除最后一位元素，返回被删除的元素，Result: 7 
 [2,5,7].plus([3,6])        //Result: [2, 5, 7, 3, 6] 
 [2,5,7,2].minus(2)         //Result: [5, 7] 
-[2,5,7].remove(1)          //Result: 5; list = [2, 7] 
+[2,5,7].remove(1)          //删除位置i的元素，返回被删除的元素，Result: 5; list = [2, 7] 
 [2,7,5].reverse()          //Result: [5, 7, 2] 
 [2,7,5].sort()             //Result: [2, 5, 7] 
 
-9.
+9.添加元素
 def lt = []
 lt << 1 // lt.add()
 lt << 2
+
+10.遍历列表
 lt.each {it-> println it}
 
+for (item in lt){
+    print ln(item)
+}
 
 ```
