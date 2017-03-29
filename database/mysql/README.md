@@ -33,6 +33,7 @@ linux下:
 * phpmyadmin
 * navicate 
 * sequel pro (适合mac)
+* [mycli](https://github.com/dbcli/mycli)
 
 ### 查看所有数据库
 * show databases;
