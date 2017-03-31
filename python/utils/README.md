@@ -29,6 +29,12 @@ print sys.path
 2.设置PYTHONPATH变量，
 export PYTHONPATH=$PYTHONPATH:'myPath'
 
+3.pycharm
+pycharm中点击File->settings->project XXX->Project Interpreter,点击右上角的设置->more
+然后点击最后一个，查看path
+点击加号，添加目录
+
+
 查看依赖包版本
 python -c "import pymysql; print pymysql.__version__;"
 
