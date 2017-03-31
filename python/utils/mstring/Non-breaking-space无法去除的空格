@@ -1,0 +1,28 @@
+
+```
+32 是普通的空格, 160 是特殊空格(unicode 编码是 \u00A0)
+
+
+print ord(u' ') # 160
+
+Java 无法 String.trim() 特殊空格
+PHP 无法 trim(String) 特殊空格
+Javascript String.trim() 可以去除特殊空格
+Python String.strip() 可以去除特殊空格
+
+
+No-breaking Space, 也被成为 Fixed Space 姑且翻译成"固定空格", 经常出现在 HTML 与 office 软件中，即 '&nbsp;'.
+
+&nbsp; 和普通空格的区别:
+    多个空格, 在 html 中会被合并成一个, &nbsp; 不会被合并.
+
+如何打印固定空格
+    系统  	输入方式
+    Mac OS	 Option + Space
+    python   print ord(u'\u00A0')
+    Java     UnicodeUtil.decodeUnicode("\\u00A0")
+
+java对固定空格trim，首先替换固定空格即可：
+    formattedString = originString.replace(' ',' ').trim();
+
+```
