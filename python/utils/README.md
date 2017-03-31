@@ -18,6 +18,17 @@ python --version
 python 执行单条命令：
 python -c 'command'
 
+查看python依赖的module路径,包含当前目录
+import sys
+print sys.path
+
+添加本地模块到sys.path
+1.sys.path 就是个普通 list，所以 += 或者 append就够用了。
+    sys.path.append(myPath)
+    sys.path += ['path1', 'path2']
+2.设置PYTHONPATH变量，
+export PYTHONPATH=$PYTHONPATH:'myPath'
+
 查看依赖包版本
 python -c "import pymysql; print pymysql.__version__;"
 
