@@ -70,7 +70,29 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Ho
 * sudo -i
 
 
-## 11.快捷键
+## 11.回车 换行符
+```
+CRLF:
+	CR   \r
+	LF   \n
+	CRLF  \r\n
+
+windows 回车为：CRLF：\r\n
+Linux和MAC 为LF：\n
+
+
+这样在vim中打开windows中记事本文件时候，出现的^M即为\r符：
+VIM中删除^M:
+	“1,$s/\r//g”
+	“1,$s/^M//g”
+Linix下打出 ^M：ctrl+V，ctrl+M
+
+git diff时候忽略 \r：
+	git config --global core.whitespace cr-at-eol
+
+```
+
+## 12.快捷键
 ```
 Dock栏中保留应用--邮件-选项-在Dock中保留
 双显示器--鼠标移动到最底部，然后往下滑动，可以将Dock栏切换至此屏幕，恢复时候操作一样，也可以关闭显示器，合盖后自动恢复。
