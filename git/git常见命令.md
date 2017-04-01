@@ -169,6 +169,9 @@ $ git diff [first-branch]...[second-branch]
 ## 显示今天你写了多少行代码
 $ git diff --shortstat "@{0 day ago}"
 
+## git diff 忽略 \r,不显示 ^M
+$ git config --global core.whitespace cr-at-eol
+
 ## 显示某次提交的元数据和内容变化
 $ git show [commit]
 
