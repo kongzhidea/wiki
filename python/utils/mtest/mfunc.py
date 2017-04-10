@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
 '''
+print locals() 打印本地变量，在函数第一行可以打印函数的参数
+'''
+
+'''
 函数可变参数, type(args)=tuple
 '''
 def calcsum(*args):
