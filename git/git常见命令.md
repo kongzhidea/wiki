@@ -2,6 +2,16 @@
 * git config --global user.name "Your Name"设置你的仓库用户名（用于标识提交者）
 * git config --global user.email "email@example.com"设置你的仓库邮箱（用于标识提交者）
 
+## git配置文件在：~/.gitconfig
+
+## git命令设置别名
+* git config --global alias.co checkout
+* git config --global alias.br branch
+* git config --global alias.ci commit
+* git config --global alias.st status
+* git config --global alias.last 'log -1 HEAD'
+    * git last
+* 
 
 ## 复制远程git仓库   
 ​$ git clone <版本库的网址>   <br/>
