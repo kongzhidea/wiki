@@ -144,6 +144,10 @@ class DataAccessMgr:
         rows = cursor.fetchall()
 
         length = len(rows)
+
+        if length == 0:
+            return None
+
         if length != 1:
             raise RuntimeError("返回结果长度必须为1，当前长度为" + str(length))
 

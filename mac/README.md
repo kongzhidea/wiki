@@ -51,6 +51,7 @@ brew install nginx
 nginx.conf在：/usr/local/etc/nginx
 
 默认html 在 ：/usr/local/var/www
+启动nginx ：sudo nginx -c /usr/local/etc/nginx/nginx.conf
 ```
 
 ## 7.安装java
