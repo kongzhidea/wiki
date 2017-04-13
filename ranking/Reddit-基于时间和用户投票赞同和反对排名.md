@@ -1,4 +1,4 @@
-## [基于时间和用户投票赞同和反馈排名](http://www.ruanyifeng.com/blog/2012/03/ranking_algorithm_reddit.html)
+## [基于时间和用户投票赞同和反对排名](http://www.ruanyifeng.com/blog/2012/03/ranking_algorithm_reddit.html)
 
 ## Reddit 使用此排名
 ## 用户可以投赞成票和反对票
