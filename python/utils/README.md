@@ -46,4 +46,5 @@ python -c "import pymysql; print pymysql.__file__;"
 bool类型: True False
 逻辑运算: and or not ，没有 && || !
 三目运算符  1 if true else 0
+if 后面可省略括号
 ```
