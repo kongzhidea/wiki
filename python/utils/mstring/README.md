@@ -78,8 +78,14 @@ print(s>st) #返回值为False
 ```
 
 #### 字符串长度：
+* 如果是非unicode类型，则返回byte数量， utf-8编码1个中文占3个字节
+* u"" 字符串表示 unicode类型字符串
+
 ```
 print(len(st))
+
+len("孔") // 3
+len(u"孔") // 1
 ```
 
 #### 大小写转换：
