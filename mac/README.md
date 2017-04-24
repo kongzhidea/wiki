@@ -67,11 +67,19 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Ho
 ## 9.tree
 * brew install tree
 
-## 10.切换root用户
+## mdfind
+* mdfind test
+* 类似linux的locate功能
+
+## 切换root用户
 * sudo -i
 
+## say
+* say "hello"
+* 文本转语音，朗读给定字符串
 
-## 11.回车 换行符
+
+## 回车 换行符
 ```
 CRLF:
 	CR   \r
@@ -93,7 +101,7 @@ git diff时候忽略 \r：
 
 ```
 
-## 12.快捷键
+## 快捷键
 ```
 Dock栏中保留应用--邮件-选项-在Dock中保留
 双显示器--鼠标移动到最底部，然后往下滑动，可以将Dock栏切换至此屏幕，恢复时候操作一样，也可以关闭显示器，合盖后自动恢复。
