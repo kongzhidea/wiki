@@ -12,6 +12,7 @@ func main() {
 	mat.PutIfAbsent("name", "kk")
 	mat.Put("id", 2)
 
+	// interface{} 转string类型
 	var name string = mat.Get("name", "").(string)
 
 	fmt.Println(name)

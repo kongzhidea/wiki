@@ -1,6 +1,8 @@
 
 # [go语言入门](http://www.runoob.com/go/go-tutorial.html)
 
+## [Go语言编程.pdf](http://download.csdn.net/download/nextack/8498951)
+
 ### hello world
 
 ```
@@ -40,7 +42,7 @@ go run hello.go
 
 package main就必须包含一个main函数，程序的初始化和执行都起始于main包。
 
-go version 查看当前go版本
+go version 查看当前go版本，程序中：runtime.Version()
 go env 查看当前go的环境变量
 go fmt [file] 格式化代码，不带file参数时候为当前目录下go文件。
 
@@ -49,6 +51,8 @@ go build hello.go  编译go文件到可执行文件
 
 从github上安装依赖，安装在GOPATH目录下，如：
 go get github.com/nu7hatch/gouuid
+
+go test 执行单元测试，要求文件名以_test.go结尾，函数名以Test开头。
 ```
 
 ### 需要注意地方
@@ -98,6 +102,8 @@ fmt.Printf，可以使用占位符，如%d，%s。
 每行最后 分号可省略，如果一行有多个语句则可以用分号隔开。
 代码块 用{}分隔。
 ```
+
+### Go中如果函数名或者全局变量的首字母大写，表示数是公有的，可以被其他程序调用，如果首字母小写，表示是私有的
 
 ### 变量定义，Go 语言程序中全局变量与局部变量名称可以相同，但是函数内的局部变量会被优先考虑。
 ```

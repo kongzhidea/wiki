@@ -29,12 +29,22 @@ value := fmt.Sprintf(format,args...)
 ```
 1.字符串用双引号定义，不能使用单引号
 
-2.折行字符串展示  使用：``，如：
+2.折行字符串展示  使用：` `，如：
 strFormat := `
 	Cannot proceed, the divider is zero.
 	dividee: %d
 	divider: 0
 `
+```
+
+### 单引号定义字符，实际类型为 int32类型
+```
+a := 'a'   // a：int32类型，实际值为97，可以直接和int类型加减操作
+
+c := string(a) // ascii码 转 字符(字符串)， c为string类型
+
+a2 := []rune(c)[0]  // 字符串转ascii码，int型
+
 ```
 
 ### 字节和字符串互转

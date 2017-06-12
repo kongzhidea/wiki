@@ -145,3 +145,24 @@ func ReverseIntArray(numbers []int) []int {
 	return newNumbers
 }
 ```
+
+### make
+```
+make()函数在golang的代码如下：
+    func make(t Type,size IntegerType) Type
+
+使用make来创建slice，map，chanel说明如下：
+    var slice_ []int = make([]int,5,10)
+    fmt.Println(slice_)
+
+    var slice_1 []int = make([]int,5)
+    fmt.Println(slice_1)
+
+    var slice_2 []int = []int{1,2}
+    fmt.Println(slice_2)
+
+打印结果：
+    [0 0 0 0 0]
+    [0 0 0 0 0]
+    [1,2]
+```

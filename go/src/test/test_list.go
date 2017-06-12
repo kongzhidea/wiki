@@ -12,9 +12,11 @@ func main() {
 
 	list.Append(1)
 	list.Append("3")
+	list.Insert(1,"11")
 	fmt.Println("list,", list)
 	fmt.Println(reflect.TypeOf(list.Get(0)))
 	fmt.Println(list.Size())
+	fmt.Println(list.Get(1))
 
 	// sublist 返回引用， 修改sublist中元素会同步修改 原list中元素。
 	sublist := list.SubList(0, 1)

@@ -1,7 +1,7 @@
 
 ## 函数
 
-#### Go 语言不支持函数重载，即无法定义两个名称一样的函数，即使它们的参数不一致。
+#### Go 语言不支持函数重载，不支持参数默认值，即无法定义两个名称一样的函数，即使它们的参数不一致。
 #### go语言支持闭包
 
 ### 函数定义
@@ -29,7 +29,7 @@ func max(a, b int) int {
 
 ```
 
-### 不定长参数，需要放在参数列表的最后面，无法传数组。
+### 不定长参数，需要放在参数列表的最后面，无法直接传数组，传数组格式：sum(nums...)。
 ```
 func sum(nums ...int) int {
 	var total = 0
@@ -43,7 +43,7 @@ func sum(nums ...int) int {
 fmt.Println(sum(1, 2, 3, 4, 5))
 ```
 
-### 函数返回多个值
+### 函数返回多个值， 返回类型用括号括起
 ```
 func swap(a, b int) (int, int) {
 	return b, a
@@ -107,8 +107,18 @@ func add(a int,b int)int  {
 func opera(a int, b int, sum func(int,int) int) int{
 	return sum(a,b)
 }
-
+// f := add
 println("opera =" ,opera(1,2,add))
 ```
 
-### Go中如果函数名的首字母大写，表示该函数是公有的，可以被其他程序调用，如果首字母小写，该函数就是是私有的
+### Go中如果函数名的首字母大写，表示该函数是公有的，可以被其他程序调用，如果首字母小写，该函数是私有的
+
+###### 函数中 返回值定义中可以定义变量，函数中可以直接使用，在return时候如果不指定return的值，则返回return_types中定义的变量
+```
+// 返回 1100
+func getValue() (x int)  {
+	x = 1100
+	return
+}
+
+```

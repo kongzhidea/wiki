@@ -15,6 +15,8 @@ type struct_variable_type struct {
 ### struct声明
 ```
 variable_name := structure_variable_type {value1, value2...valuen}
+
+普通的 struct（非指针类型）的对象不能赋值为 nil，也不能和 nil 进行判等（==）
 ```
 
 ### demo
@@ -158,6 +160,20 @@ p.setName("xixi")
 fmt.Println(p.getName())
 ```
 
+### 基本类型，定义别名
+```
+type Integer int
+
+func (m Integer) Add(i int) Integer {
+	return Integer(int(m) + i)
+}
+
+使用：
+var it Integer = Integer(1) // 定义Integer类型，int转Integer
+it2 := it.Add(2)
+
+i3 := int(it2) // Integer类型转int类型
+```
 
 
 ### 匿名字段
@@ -356,6 +372,21 @@ default:
     fmt.Printf("Unexpected type %T\n", t)
 }
 ```
+
+```
+
+interface{} 转为string类型：
+    var obj interface{} = "abcd"
+    val, ok = obj.(string)    // ok为true/false，表示转换成功或失败
+
+interface{} 转为string类型：
+    var obj interface{} = 11
+    obj.(int)
+
+
+obj.(type) 只能在switch中使用
+```
+
 
 ### 判断interface{} 是否实现某接口
 ```

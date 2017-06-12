@@ -78,6 +78,15 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Ho
 * say "hello"
 * 文本转语音，朗读给定字符串
 
+## java InetAddress.getLocalHost() 方法特别慢
+```
+处理方式：
+hostname   获取主机名：kongzhihuideMacBook-Pro.local
+
+/etc/hosts中增加
+127.0.0.1		   kongzhihuideMacBook-Pro.local
+::1             kongzhihuideMacBook-Pro.local
+```
 
 ## 回车 换行符
 ```
@@ -99,6 +108,16 @@ Linix下打出 ^M：ctrl+V，ctrl+M
 git diff时候忽略 \r：
 	git config --global core.whitespace cr-at-eol
 
+```
+
+## vim配置
+```
+见 .vimrc
+syntax on   彩色vim
+set ignorecase 忽略大小写
+set expandtab tab转换为空格
+set noexpandtab tab不转换为空格
+set tabstop=4 tab转换空格数量
 ```
 
 ## 快捷键

@@ -1,0 +1,4 @@
+.idea
+pkg
+go-sql-driver
+go-redis

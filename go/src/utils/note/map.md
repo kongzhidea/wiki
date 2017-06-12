@@ -4,7 +4,9 @@
 ### map声明和定义
 * map 无序
 * interface{}类型 和java中的Object类似，标示任意类型。
-    * dict := map[string]interface{}{} 
+    * dict := map[string]interface{}{}
+    * var dict  = map[string]interface{}{}
+	* var dict = make(map[string]interface{})
 
 ```
 /* 声明变量，默认 map 是 nil，无法赋值 */
@@ -163,5 +165,29 @@ func main() {
     default:
         fmt.Printf("Unexpected type %T", t)
     }
+}
+```
+
+```
+
+interface{} 转为string类型：
+    var obj interface{} = "abcd"
+    val, ok = obj.(string)    // ok为true/false，表示转换成功或失败
+
+interface{} 转为string类型：
+    var obj interface{} = 11
+    obj.(int)
+
+
+obj.(type) 只能在switch中使用
+```
+
+
+### 判断interface{} 是否实现某接口
+```
+var obj interface{} = shape
+
+if sv, ok := obj.(Shaper); ok {
+	fmt.Printf("v implements String(): %+v\n", sv) // note: sv(Shape类型), not v
 }
 ```
