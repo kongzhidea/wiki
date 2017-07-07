@@ -31,6 +31,13 @@ brew uninstall wget
 * 隐藏：
 	* defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder
 
+### 4.1 文本编辑
+* 点击文本编辑，弹出窗口而不是新建文件：
+    * 设置-->iCloud -->取消 iCloud Drive勾选
+* OS X 文本编辑等应用为何会自动转换引号
+    * 系统偏好设置-->键盘-->文本-->取消 使用智能引号和破折号  
+    * 文本编辑-->偏好设置-->取消 智能引号，智能破折号，智能链接
+    
 ## 5.在finder中打开终端
 ```
 系统偏好设置 -> 键盘 -> 快捷键 -> 服务，勾选「新建位于文件夹位置的终端窗口」
@@ -63,6 +70,8 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Ho
 ```
 
 ## 8.安装idea，eclipse，pycharm，mysql 下载对应的dmg文件即可。
+* [mysql安装](https://segmentfault.com/a/1190000004061246)
+* mysql启动时候，保证/usr/local/mysql是mysql用户，执行命令：sudo chown -R mysql:mysql /usr/local/mysql-5.7.16-osx10.11-x86_64/
 
 ## 9.tree
 * brew install tree
