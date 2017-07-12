@@ -83,6 +83,9 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Ho
 ## 切换root用户
 * sudo -i
 
+## 查找进程
+* ps -ef |grep pid
+
 ## say
 * say "hello"
 * 文本转语音，朗读给定字符串
