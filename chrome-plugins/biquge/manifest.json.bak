@@ -1,0 +1,12 @@
+{
+  "name": "Flutter",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "I Love Flutter ~~！",
+  "content_scripts": [
+    {
+      "matches": ["http://www.biqudu.com/*","http://www.biquge.tw/*","http://www.xxbiquge.com/*","http://www.23us.cc/*","http://www.23us.com/*","http://www.xs.la/*","http://www.81zw.com/*","http://www.zwdu.com/*","http://www.qu.la/*"],
+      "js": ["script.js"]
+    }
+  ]
+}
