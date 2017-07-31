@@ -6,6 +6,13 @@ function removeAda(){
 			document.getElementById(id).remove()
 		}
 	}
+	var classNames = ["adshow"]
+	for(var i=0;i<classNames.length;i++){
+		var className = classNames[i]
+		if(document.getElementsByClassName(className).length == 1){
+			document.getElementsByClassName(className)[0].remove()
+		}
+	}
 }
 removeAda()
 setTimeout("removeAda()",3000)
