@@ -282,7 +282,7 @@ line.decode("gbk").encode("utf-8")
 ```
 
 #### 是否以prefix开头
-S.startwith(prefix[,start[,end]])
+S.startswith(prefix[,start[,end]])
 
 #### 以suffix结尾
 S.endwith(suffix[,start[,end]])
