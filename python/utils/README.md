@@ -48,3 +48,12 @@ bool类型: True False
 三目运算符  1 if true else 0
 if 后面可省略括号
 ```
+
+```
+# 判断类型
+isinstance(object, classinfo) 
+如:isinstance(2, int)  返回True
+
+# type(object) 返回变量类型，本身返回值为type类型。
+如 type(1) 返回type类型<type 'int'>
+```
