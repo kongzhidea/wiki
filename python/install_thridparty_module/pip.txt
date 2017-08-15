@@ -7,7 +7,9 @@ cd pip-1.5.4
 sudo python setup.py install
 
 2.pip列出安装模块
-sudo pip list
+pip list
+老版本的：
+pip freeze
 
 3.安装模块
 sudo pip install module
