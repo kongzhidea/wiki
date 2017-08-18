@@ -31,6 +31,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("day")  ## 必须参数
 parser.add_argument("-e", "--encoding")   ## 可选参数，  -和-- 表示可选参数。
+# parser.add_argument("--id_col", type=str, default='vid') # 可以设置默认值
 args = parser.parse_args()
 
 
