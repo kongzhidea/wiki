@@ -22,3 +22,18 @@ print(len(sys.argv))
 for i in sys.argv:
    print i
 
+
+
+### 解析main  长短参数
+'''
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("time")
+parser.add_argument("day")
+parser.add_argument("-e", "--encoding")
+args = parser.parse_args()
+
+
+运行时候 可以指定key，如果不指定key则默认按照add顺序。
+'''
