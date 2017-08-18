@@ -29,9 +29,8 @@ for i in sys.argv:
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("time")
-parser.add_argument("day")
-parser.add_argument("-e", "--encoding")
+parser.add_argument("day")  ## 必须参数
+parser.add_argument("-e", "--encoding")   ## 可选参数，  -和-- 表示可选参数。
 args = parser.parse_args()
 
 
