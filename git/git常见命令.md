@@ -11,7 +11,17 @@
 * git config --global alias.st status
 * git config --global alias.last 'log -1 HEAD'
     * git last
-* 
+
+## git 安装
+* windows
+  * 下载Git for windows，插件推荐全部安装，包含 git bash，git history等。
+* linux，看虚拟机版本选择下面命令
+  *  sudo yum install git-core
+  *  sudo yum install git
+  *  sudo apt-get install git
+* mac
+  *  brew install git
+  *  [图形化管理sourcetreeapp](https://www.sourcetreeapp.com/)
 
 ## 复制远程git仓库   
 ​$ git clone <版本库的网址>   <br/>
