@@ -29,4 +29,7 @@ web server  搭建web简单服务器，不常用。
 clear cache  清除js缓存等。
 
 octotree  github使用，左侧展示git目录。
+Sourcegraph for GitHub 像IDE一样使用github
 ```
+
+[生成二维码](https://kongzhidea.github.io/static/qrcode/)
