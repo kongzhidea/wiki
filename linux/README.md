@@ -43,6 +43,10 @@ ssh 无密码登录要使用公钥与私钥。linux下可以用用ssh-keygen生�
 
 #### locate 快速定位某个文件地址
 ```
+centos 安装 locate
+    yum -y install mlocate
+    updatedb
+    
 locate fileName   在整个系统中查询该文件，可以使用通配符。
 
 -e 将排除在寻找的范围之外。

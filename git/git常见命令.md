@@ -18,6 +18,7 @@
 * linux，看虚拟机版本选择下面命令
   *  sudo yum install git-core
   *  sudo yum install git
+    * git 颜色高亮：git config --global color.ui true
   *  sudo apt-get install git
 * mac
   *  brew install git
