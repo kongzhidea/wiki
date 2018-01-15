@@ -398,3 +398,17 @@ mvn 打包后会把${project.env}替换为 env-filter.properties中的变量值�
 app.name=kk    #config.properties  文件内容
 app.name=kk_test   #config-test.properties  文件内容
 ```
+
+# mvn 排包，检测jar包冲突
+``
+<plugin>
+       <groupId>paibao</groupId>
+      <artifactId>pai-maven-plugin</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <configuration>
+         <versionCheckConfig>${basedir}/versionCheck.pb</versionCheckConfig>
+     </configuration>
+ </plugin>
+
+命令：mvn pai:bao
+```
