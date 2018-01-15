@@ -14,5 +14,8 @@ wget http://peak.telecommunity.com/dist/ez_setup.py
 
 注意点：
 1. 安装mysql-python时候，需要 yum install mysql-devel 
-2.  Could not find Python.h，需要 yum install python-devel
+2. Could not find Python.h，需要 yum install python-devel
+3. ffi.h: No such file or directory ，需要 yum install libffi-devel
+4. 升级 setuptools：从https://pypi.python.org/pypi/setuptools下载zip，解压， sudo python setup.py install 
+5. 安装 Distribute：http://www.nowamagic.net/academy/detail/1330219
 
