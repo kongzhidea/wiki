@@ -7,6 +7,10 @@ import os.path
 '''
 os.path.dirname(path)  返回path的父目录
 
+print __file__  ## 当前文件地址
+print os.path.abspath(__file__)  ## 当前文件绝对地址
+print os.path.dirname(os.path.abspath(__file__))  ## 当前文件绝对目录
+
 # 遍历文件夹下文件
 rootdir = "/Users/kongzhihui/test"  # 指明被遍历的文件夹
 
