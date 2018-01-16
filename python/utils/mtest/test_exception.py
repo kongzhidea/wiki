@@ -93,12 +93,30 @@ except Networkerror,e:
     print e.args
 '''
 
+```
+打印异常栈信息：
+
+import traceback
+
+
+print 'str(Exception):\t', str(Exception)
+print 'str(e):\t\t', str(e)
+print 'repr(e):\t', repr(e)
+print 'e.message:\t', e.message
+print 'traceback.print_exc():';
+traceback.print_exc()
+print 'traceback.format_exc():\n%s' % traceback.format_exc()
+
+
+一般采用：traceback即可， 推荐采用：traceback.format_exc() 方式
+```
+
 
 try:
     fh = open("no_this_file", "r")
     cont = fh.read()
 except IOError,e:
     print "Error: 没有找到文件或读取文件失败",e.message,e.filename
-else:
+finally:
     print "读取文件成功"
     fh.close()
