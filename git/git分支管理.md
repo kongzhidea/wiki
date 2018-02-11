@@ -20,7 +20,7 @@
 > 一般当前如果不在该分支时，使用这种方式提交。如果当前在 2.0.1.20120806 分支下，也可以直接提交：git push
 
 ### 6.删除远程分支,origin后面加一个空格 
-> git push origin :develop
+> git push origin :branch-name
 
 ### 7.删除本地分支：
 > git branch -d xxxxx
