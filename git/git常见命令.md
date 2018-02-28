@@ -12,6 +12,9 @@
 * git config --global alias.last 'log -1 HEAD'
     * git last
 
+## 查看当前全局配置
+* git config --global  --list
+
 ## git 安装
 * windows
   * 下载Git for windows，插件推荐全部安装，包含 git bash，git history等。
