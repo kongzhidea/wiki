@@ -260,3 +260,5 @@ $ git reset [commit]
 * git stash list: 显示Git栈内的所有备份，可以利用这个列表来决定从那个地方恢复。
 * git stash clear: 清空Git栈。此时使用gitg等图形化工具会发现，原来stash的哪些节点都消失了。
 * 场景：当前工作区内容已被修改，但是并未完成。这时Boss来了，说前面的分支上面有一个Bug，需要立即修复。可是我又不想提交目前的修改，因为修改没有完成。但是，不提交的话，又没有办法checkout到前面的分支。此时用Git Stash就相当于备份工作区了。然后在Checkout过去修改，就能够达到保存当前工作区，并及时恢复的作用。
+
+## [Removing sensitive data from a repository](https://help.github.com/articles/removing-sensitive-data-from-a-repository/)
