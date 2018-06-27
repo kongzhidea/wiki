@@ -412,3 +412,16 @@ app.name=kk_test   #config-test.properties  文件内容
 
 命令：mvn pai:bao
 ```
+
+5. mvn 打印依赖树指定插件版本
+```
+方案一：
+mvn  org.apache.maven.plugins:maven-dependency-plugin:2.8:tree -X
+
+方案二：
+在pom.xml中添加：
+
+<properties>
+    <maven_dependency_plugin_version>3.1.0</maven_dependency_plugin_version>
+</properties>
+```
