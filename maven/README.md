@@ -399,10 +399,11 @@ app.name=kk    #config.properties  文件内容
 app.name=kk_test   #config-test.properties  文件内容
 ```
 
-# mvn 排包，检测jar包冲突
-``
+### mvn 排包，检测jar包冲突
+
+```
 <plugin>
-       <groupId>paibao</groupId>
+      <groupId>paibao</groupId>
       <artifactId>pai-maven-plugin</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <configuration>
@@ -413,7 +414,7 @@ app.name=kk_test   #config-test.properties  文件内容
 命令：mvn pai:bao
 ```
 
-5. mvn 打印依赖树指定插件版本
+### mvn 打印依赖树指定插件版本
 ```
 方案一：
 mvn  org.apache.maven.plugins:maven-dependency-plugin:2.8:tree -X
