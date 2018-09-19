@@ -7,6 +7,8 @@
 
 ### [redis Java客户端使用](https://github.com/kongzhidea/redis)
 
+### redis geo 位置结合使用
+
 ### linux下redis安装部署
 ```
 使用3.0.5版本。
