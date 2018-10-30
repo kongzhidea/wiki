@@ -164,7 +164,7 @@ command+h   隐藏当前界面。
 
 隐藏底部菜单栏：alt+command+d
 
-截屏快捷键：ctrl+command+shift+4 自定义截屏，ctrl+command+shift+4 截全屏，推荐使用钉钉的截屏软件。
+截屏快捷键：ctrl+command+shift+4 自定义截屏，ctrl+command+shift+3 截全屏，推荐使用钉钉的截屏软件。
 
 右键： 两根手指 一起点击，或者ctrl+单击
 
