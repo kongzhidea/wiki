@@ -25,6 +25,7 @@ src
 
 ### setting文件
 * 位置在 ~/.m2目录（推荐），或 M2_HOME/conf
+* 配置localRepository时候，使用绝对地址，不要使用 ，否则可能每次编译的时候，会在当前目录增加一个~目录。
 ```
 ~/.m2
 	settings.xml
