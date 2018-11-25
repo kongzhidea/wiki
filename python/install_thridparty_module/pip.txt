@@ -73,3 +73,9 @@ sudo easy_install "scikit-learn==0.18.1"
 
 8. 查询某模块详细信息
 pip show moduleName
+
+9. 查询某安装包所有版本
+  a. 访问如下网址：https://pypi.org/simple/XXXXXX/
+     XXXXXX 是你关心包的名字，例如: python-jenkins
+  b. 安装一个不存在的版本,然后就会出现所有可以安装版本
+
