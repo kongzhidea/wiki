@@ -84,6 +84,8 @@ def rmdir(dname, force=False):
 # 读取非UTF-8编码的文本文件，需要给open()函数传入encoding参数，例如，读取GBK编码的文件：f = open('/Users/michael/gbk.txt', 'r', encoding='gbk')
 # 遇到有些编码不规范的文件，可能会遇到UnicodeDecodeError。遇到这种情况，open()函数还接收一个errors参数：f = open('/Users/michael/gbk.txt', 'r', encoding='gbk', errors='ignore')
 
+# 对于二进制文件，如图片，需要制定使用 字节形式来读取，open(fname, "rb")，否则读取信息会丢失。
+
 def readFileToString(fname):
     with open(fname) as fp:  # 或者fp = open("file.txt","r")
         cont = fp.read()
