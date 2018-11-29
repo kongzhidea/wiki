@@ -88,7 +88,7 @@ def rmdir(dname, force=False):
 
 def readFileToString(fname):
     with open(fname) as fp:  # 或者fp = open("file.txt","r")
-        cont = fp.read()
+        cont = fp.read() # cont为str类型，非unicode字符。
     # fp = None
     # cont = None
     # try:
