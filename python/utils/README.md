@@ -57,3 +57,5 @@ isinstance(object, classinfo)
 # type(object) 返回变量类型，本身返回值为type类型。
 如 type(1) 返回type类型<type 'int'>
 ```
+
+### [WTF Python：有趣且鲜为人知的Python特性](https://github.com/leisurelicht/wtfpython-cn)
