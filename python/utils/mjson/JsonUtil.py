@@ -15,7 +15,6 @@ def loads(s):
 # pretty:true 格式化输出， ensure_ascii：False 直接打印中文
 # 没有default参数，只能适用于dict和list等基本类型，不能适用与Class。default可以适用与Class转json，可以自定义函数。
 def dumps(j, pretty=False, ensure_ascii=False, default=None):
-    print type(j)
     if default is None:
         default = lambda obj: obj.__dict__
     if not pretty:
