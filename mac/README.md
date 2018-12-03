@@ -10,6 +10,7 @@
 
 cd /usr/local
 sudo chown -R kongzhihui:staff .
+新版本mac不用再使用root账号执行。
 
 安装软件，不要用root用户：
 brew install wget
