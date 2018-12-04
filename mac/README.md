@@ -77,6 +77,13 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Ho
 ## 9.tree
 * brew install tree
 
+
+## 办公软件
+* Keynote -- ppt
+* Numbers -- excel
+* Pages -- word
+
+
 ## mdfind
 * mdfind test
 * 类似linux的locate功能
