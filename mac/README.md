@@ -117,14 +117,10 @@ hostname   获取主机名：kongzhihuideMacBook-Pro.local
     * brew install ssh-copy-id
 * 复制RSA公钥，代替步骤2
     * ssh-copy-id root@1.2.3.4    
-
+* .ssh/config 文件配置别名
+    * 使用： ssh 别名
+    * 使用前最好把公钥复制到对应的主机
 ```
-.ssh/config 文件配置别名
-使用： ssh 别名
-使用前最好把公钥复制到对应的主机
-样例如下：
-
-
 Host 别名
     Hostname 主机名
     Port 端口
