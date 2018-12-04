@@ -108,6 +108,16 @@ hostname   获取主机名：kongzhihuideMacBook-Pro.local
 ::1             kongzhihuideMacBook-Pro.local
 ```
 
+## 免密登录
+* 生活公钥和私钥：ssh-keygen -t rsa -P ''
+    * 公钥文件：~/.ssh/id_rsa.pub
+* 把A机下的/root/.ssh/id_rsa.pub 复制到B机的 /root/.ssh/authorized_keys文件里，先要在B机上创建好 /root/.ssh 这个目录，
+    * 用scp复制或者：cat >> .ssh/authorized_keys  
+* mac安装ssh-copy-id
+    * brew install ssh-copy-id
+* 复制RSA公钥，代替步骤2
+    * ssh-copy-id root@1.2.3.4    
+
 ## 回车 换行符
 ```
 CRLF:
