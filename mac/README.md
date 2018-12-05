@@ -136,6 +136,7 @@ Host 别名
 * [屏幕内管理快捷键如下](http://mingxinglai.com/cn/2012/09/tmux/)
 ```
 ctrl+b 为默认指明前缀，
+? 帮助
 % 水平切分
 " 垂直切分
 ctrl+d 关闭面板
