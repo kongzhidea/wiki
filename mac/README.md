@@ -155,6 +155,11 @@ d 退出当前屏幕，但是保留当前屏幕现场，下次进入可以恢复
     * 如果新打开的页签不生效，则将souce命令 复制到.bash_profile文件中。
 * 使用： j $path
     * 是根据历史记录来找，所以需要先cd到对应的目录后，使用j $path才能找到对应的目录。
+* jo $path    在finder中打开目录
+* jc $path  优先在子目录下跳转，如果子目录没有则同j命令
+* jco $path 优先在子目录中打开，如果子目录没有则同jo命令
+* j -s 可以查询对应的目录权重
+    * 保存在~/Library/autojump/autojump.txt 文件
 
     
 
