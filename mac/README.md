@@ -125,7 +125,23 @@ Host 别名
     Hostname 主机名
     Port 端口
     User 用户名
-```    
+```
+
+## tmux 屏幕管理
+* brew install tmux
+* tmux 进入屏幕，默认名字为数字。
+* tmux new -s screenName    进入屏幕，并为屏幕命名
+* tmux ls   查看当前屏幕列表
+* tmux attach -t screenName  管理屏幕
+* [屏幕内管理快捷键如下](http://mingxinglai.com/cn/2012/09/tmux/)
+```
+ctrl+b 为默认指明前缀，
+% 水平切分
+" 垂直切分
+ctrl+d 关闭面板
+x   然后输入y， 关闭面板，同ctrl+d
+d 退出当前屏幕，但是保留当前屏幕现场，下次进入可以恢复原状
+```
     
 
 ## 回车 换行符
