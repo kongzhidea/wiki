@@ -133,6 +133,8 @@ Host 别名
 * tmux new -s screenName    进入屏幕，并为屏幕命名
 * tmux ls   查看当前屏幕列表
 * tmux attach -t screenName  管理屏幕
+    * 简写为 tmux a -t screenName
+* tmux rename -t oldName newName    
 * [屏幕内管理快捷键如下](http://mingxinglai.com/cn/2012/09/tmux/)
 ```
 ctrl+b 为默认指明前缀，
