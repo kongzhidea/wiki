@@ -127,7 +127,7 @@ Host 别名
     User 用户名
 ```
 
-## tmux 屏幕管理
+## tmux 屏幕管理神器
 * brew install tmux
 * tmux 进入屏幕，默认名字为数字。
 * tmux new -s screenName    进入屏幕，并为屏幕命名
@@ -145,6 +145,17 @@ ctrl+d 关闭面板
 x   然后输入y， 关闭面板，同ctrl+d
 d 退出当前屏幕，但是保留当前屏幕现场，下次进入可以恢复原状
 ```
+
+## autojump 目录切换神器
+* brew install autojump
+* 初始化 autojump.sh
+    * mdfind autojump.sh
+    * 返回地址如下：/usr/local/Cellar/autojump/22.5.1/etc/profile.d/autojump.sh
+    * 找到最后一个autojump.${shell}，执行对应的source操作
+    * 如果新打开的页签不生效，则将souce命令 复制到.bash_profile文件中。
+* 使用： j $path
+    * 是根据历史记录来找，所以需要先cd到对应的目录后，使用j $path才能找到对应的目录。
+
     
 
 ## 回车 换行符
