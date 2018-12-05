@@ -212,7 +212,7 @@ $ git reflog
 ## 下载远程仓库的所有变动
 $ git fetch [remote]
 
-## 显示所有远程仓库
+## 显示所有远程仓库，查看远程仓库git地址
 $ git remote -v
 
 ## 显示某个远程仓库的信息
