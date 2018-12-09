@@ -72,6 +72,11 @@ def addDay(date, delta):
     return date + datetime.timedelta(days=delta)
 
 
+# 时间戳(单位：秒)转 datetime.datetime 类型，
+def fromtimestamp(timestamp):
+    return datetime.datetime.fromtimestamp(timestamp)
+
+
 if __name__ == "__main__":
     dateC = datetime.datetime(2013, 9, 5, 11, 00, 00)
     dateD = datetime.date(2013, 9, 5)
@@ -95,11 +100,13 @@ if __name__ == "__main__":
 
     print getTimeTuple(datetime.datetime.today())
 
-    now = datetime.datetime.today()
+    now = datetime.datetime.today()  # 也可以写成：datetime.datetime.now()，  返回datetime.datetime类型
 
-    print now.year, now.month, now.day, now.hour, now.minute, now.second
+    print now.year, now.month, now.day, now.hour, now.minute, now.second, type(now)
 
     print parseDate("2017-03-16"), type(parseDate("2017-03-16"))
     print parseTime("2013-09-05 11:00:00"), type(parseTime("2013-09-05 11:00:00"))
 
     print defaultTime(addDay(now, -20))
+
+    print fromtimestamp(1544198400), type(fromtimestamp(1544198400))
