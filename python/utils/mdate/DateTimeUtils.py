@@ -18,7 +18,7 @@ print now.year,now.month,now.day,now.hour,now.minute,now.second
 '''
 
 
-# date为datetime或date类型，返回时间戳，long型，date为null则表示当前时间戳
+# date为datetime或date类型，返回时间戳，long型，精确到秒，date为null则表示当前时间戳
 def getUnixTime(date=None):
     if date:
         return long(time.mktime(date.timetuple()))
