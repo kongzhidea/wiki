@@ -15,6 +15,9 @@ datetime.date.today()
 now =datetime.datetime.today()
 print now.year,now.month,now.day,now.hour,now.minute,now.second
 
+两个datetime 可以直接比较，例如  print d1 < d2
+两个datetime相减，可以返回：datetime.timedelta，  delta.total_seconds() 可以获取间隔的秒数
+
 '''
 
 
