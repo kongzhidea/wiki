@@ -52,6 +52,9 @@ go build hello.go  编译go文件到可执行文件
 从github上安装依赖，安装在GOPATH目录下，如：
 go get github.com/nu7hatch/gouuid
 
+推荐使用：go.uuid，使用方法：uid.NewV4().String()
+go get github.com/satori/go.uuid
+
 go test 执行单元测试，要求文件名以_test.go结尾，函数名以Test开头。
 ```
 
