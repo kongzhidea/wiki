@@ -31,6 +31,7 @@ def doPost(url,param = None):
 #原生post格式,data string格式
 def sendPostRequest(url,data):
     response = requests.post(url, data=data)
+    # response.text 返回unicode类型，response.content 返回str类型
     return response.text
 
 if __name__ == "__main__":
