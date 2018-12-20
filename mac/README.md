@@ -25,6 +25,9 @@ brew uninstall wget
 * item2    mac终端
 * ihosts 绑定环境。
 * 连接数据库软件--sequel pro，下载对应的dmg文件即可。
+    * [Sequel Pro Crashing after macOS Mojave Upgrade](https://by-example.org/sequel-pro-crashing-after-macos-mojave-upgrade/)
+    * 直接安装：brew cask install homebrew/cask-versions/sequel-pro-nightly
+    * [下载](https://github.com/khanhicetea/sequelpro/releases)
 
 ## 4.显示/隐藏  隐藏文件夹
 * 显示：
