@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import time
 
+# 推荐使用datetime
 
 # 返回unxi时间戳，long型，精确到秒，date为struct_time格式，不传则表示当前时间
 def getUnixTime(date=None):
