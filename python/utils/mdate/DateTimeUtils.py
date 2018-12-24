@@ -80,6 +80,27 @@ def fromtimestamp(timestamp):
     return datetime.datetime.fromtimestamp(timestamp)
 
 
+def parseSeconds(second):
+    day = second / 3600 / 24
+    hour = second / 3600 % 24
+    minute = second / 60 % 60
+    sec = second % 60
+
+    buffer = ""
+
+    if day > 0 :
+        buffer += "{}天".format(day)
+
+    if hour > 0 :
+        buffer += "{}时".format(hour)
+
+    if minute > 0 :
+        buffer += "{}分".format(minute)
+
+    buffer += "{}秒".format(sec)
+    return buffer
+
+
 if __name__ == "__main__":
     dateC = datetime.datetime(2013, 9, 5, 11, 00, 00)
     dateD = datetime.date(2013, 9, 5)
@@ -113,3 +134,5 @@ if __name__ == "__main__":
     print defaultTime(addDay(now, -20))
 
     print fromtimestamp(1544198400), type(fromtimestamp(1544198400))
+
+    print parseSeconds(100000)
