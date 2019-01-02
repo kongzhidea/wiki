@@ -292,6 +292,23 @@ mvn test -Dtest=ATest,BTest   指定即使没有任何测试用例也不要报�
   			<jdk>1.8</jdk>
  		</activation>
 	 	<properties>
+	  		<maven.compiler.source>1.8</maven.compiler.source>
+	  		<maven.compiler.target>1.8</maven.compiler.target>
+	  		<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+	 	</properties>
+	</profile>
+</profiles>
+
+或者指定为1.6级别。（不推荐，最好为1.8）
+
+<profiles>
+	<profile>
+ 		<id>jdk-1.8</id>
+ 		<activation>
+  			<activeByDefault>true</activeByDefault>
+  			<jdk>1.8</jdk>
+ 		</activation>
+	 	<properties>
 	  		<maven.compiler.source>1.6</maven.compiler.source>
 	  		<maven.compiler.target>1.6</maven.compiler.target>
 	  		<maven.compiler.compilerVersion>1.6</maven.compiler.compilerVersion>
