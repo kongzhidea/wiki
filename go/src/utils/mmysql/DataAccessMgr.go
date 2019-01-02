@@ -29,8 +29,10 @@ func NewDataSourceDef(username string, password string, ip string, dbname string
 	return DataSource{Username: username, Password: password, Ip: ip, Port: 3306, Dbname: dbname}
 }
 
+// parseTime=true 可以解析为time.Time类型，否则则解析为[]uint8类型（DateAccessMgr会转为string类型）
+// 完全版：format := "%s:%s@tcp(%s:%s)/%s?charset=%s&parseTime=True&loc=Local&timeout=%s&readTimeout=%s&writeTimeout=%s"
 func (d DataSource) ConnectString() string {
-	return fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8", d.Username, d.Password, d.Ip, d.Port, d.Dbname)
+	return fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=true", d.Username, d.Password, d.Ip, d.Port, d.Dbname)
 }
 
 type DataAccessMgr struct {
