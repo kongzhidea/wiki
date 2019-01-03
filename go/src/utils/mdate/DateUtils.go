@@ -46,11 +46,11 @@ func Format(time time.Time, format string) string {
 }
 
 func ParseDate(s string) (time.Time, error) {
-	return time.Parse("2006-01-02", s)
+	return time.ParseInLocation("2006-01-02", s, time.Local)
 }
 
 func ParseTime(s string) (time.Time, error) {
-	return time.Parse("2006-01-02 15:04:05", s)
+	return time.ParseInLocation("2006-01-02 15:04:05", s, time.Local)
 }
 
 func Parse(s, format string) (time.Time, error) {
@@ -60,7 +60,7 @@ func Parse(s, format string) (time.Time, error) {
 	format = strings.Replace(format, "HH", "15", -1)
 	format = strings.Replace(format, "mm", "04", -1)
 	format = strings.Replace(format, "ss", "05", -1)
-	return time.Parse(format, s)
+	return time.ParseInLocation(format, s, time.Local)
 }
 
 func AddDay(date time.Time, day int64) time.Time {
