@@ -20,7 +20,7 @@ brew uninstall wget
 ```
 
 ## 3.安装常见软件
-* 视频播放  MplayerX
+* 视频播放  MplayerX， IINA(播放流)
 * [macdown](http://www.pc6.com/mac/137960.html)
 * item2    mac终端
 * ihosts 绑定环境。
