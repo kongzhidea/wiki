@@ -61,6 +61,7 @@ func Post(url0 string) (string, error) {
 	return PostWithParamMap(url0, map[string]string{})
 }
 
+// post form data形式
 func PostWithParamMap(url0 string, param map[string]string) (string, error) {
 	paramStr := UrlEncodeMap0(param)
 
@@ -80,6 +81,7 @@ func PostWithParamMap(url0 string, param map[string]string) (string, error) {
 	return string(body), nil
 }
 
+// post  form data形式。
 func PostWithParamValues(url0 string, values url.Values) (string, error) {
 	resp, err := http.PostForm(url0, values)
 	if err != nil {
@@ -91,6 +93,37 @@ func PostWithParamValues(url0 string, values url.Values) (string, error) {
 	if err != nil {
 		return "", err
 	}
+
+	return string(body), nil
+}
+
+// post form data形式，支持header, params 不能为空
+func PostForm(url string, params map[string]string, header map[string]string) (string, error) {
+	paramList := []string{}
+	for key, val := range params {
+		paramList = append(paramList, key+"="+val)
+	}
+
+	req, err := http.NewRequest("POST", url, strings.NewReader(strings.Join(paramList, "&")))
+	if err != nil {
+		return "", err
+	}
+	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	if header != nil {
+		for key, value := range header {
+			req.Header.Set(key, value)
+		}
+	}
+
+	client := &http.Client{}
+
+	resp, err := client.Do(req)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+
+	body, _ := ioutil.ReadAll(resp.Body)
 
 	return string(body), nil
 }
