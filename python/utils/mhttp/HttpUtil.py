@@ -28,7 +28,7 @@ def doPost(url,param = None):
     html = response.read()
     return html
 
-#原生post格式,data string格式
+#原生post格式,data string格式则为rawdata形式，data 为dict类型则为 form data形式。
 def sendPostRequest(url,data):
     response = requests.post(url, data=data)
     # response.text 返回unicode类型，response.content 返回str类型
