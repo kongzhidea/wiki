@@ -67,3 +67,27 @@ func AddDay(date time.Time, day int64) time.Time {
 	delta, _ := time.ParseDuration(fmt.Sprintf("%dh", day*24))
 	return date.Add(delta)
 }
+
+func AddMinute(date time.Time, min int64) time.Time {
+	delta, _ := time.ParseDuration(fmt.Sprintf("%dm", min))
+	fmt.Println(delta)
+	return date.Add(delta)
+}
+
+func GetMorning(date time.Time) time.Time {
+	hour := date.Hour()
+	min := date.Minute()
+	sec := date.Second()
+	delta, _ := time.ParseDuration(fmt.Sprintf("-%dh%dm%ds", hour, min, sec))
+	return date.Add(delta)
+}
+
+func GetNight(date time.Time) time.Time {
+	hour := date.Hour()
+	min := date.Minute()
+	sec := date.Second()
+	delta, _ := time.ParseDuration(fmt.Sprintf("-%dh%dm%ds", hour, min, sec))
+
+	delta = delta + 24*time.Hour - 1*time.Second
+	return date.Add(delta)
+}
