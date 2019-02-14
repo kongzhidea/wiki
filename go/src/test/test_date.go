@@ -24,6 +24,9 @@ func main() {
 	fmt.Println(DateUtils.DefaultDate(now))
 	fmt.Println(DateUtils.DefaultTime(now))
 	fmt.Println(DateUtils.Format(now, "yyyy-MM-dd HH"))
+	fmt.Println("SSS")
+	fmt.Println(DateUtils.Format(now, "yyyy-MM-dd HH:mm:ss.SSS"))
+	fmt.Println(time.Now().Format("2006-01-02 15:04:05.999"))
 
 	fmt.Println(DateUtils.ParseDate("2017-05-24"))
 	fmt.Println(DateUtils.ParseTime("2017-05-24 20:46:12"))

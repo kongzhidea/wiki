@@ -34,7 +34,8 @@ func DefaultDate(time time.Time) string {
 	return time.Format("2006-01-02")
 }
 
-// yyyy-MM-dd HH:mm:ss
+// String returns the time formatted using the format string  "2006-01-02 15:04:05.999999999 -0700 MST"
+// yyyy-MM-dd HH:mm:ss.SSS     如果毫秒为0则不展示毫秒。
 func Format(time time.Time, format string) string {
 	format = strings.Replace(format, "yyyy", "2006", -1)
 	format = strings.Replace(format, "MM", "01", -1)
@@ -42,8 +43,11 @@ func Format(time time.Time, format string) string {
 	format = strings.Replace(format, "HH", "15", -1)
 	format = strings.Replace(format, "mm", "04", -1)
 	format = strings.Replace(format, "ss", "05", -1)
+	format = strings.Replace(format, "SSS", "999", -1)
+	fmt.Println(format)
 	return time.Format(format)
 }
+
 
 func ParseDate(s string) (time.Time, error) {
 	return time.ParseInLocation("2006-01-02", s, time.Local)

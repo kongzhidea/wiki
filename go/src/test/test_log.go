@@ -5,11 +5,12 @@ import (
 	"github.com/golang/glog"
 )
 
-// glog中 Stderr 修改为 Stdout
+// glog中 Stderr 修改为 Stdout（默认为error）: init方法中  修改为logging.stderrThreshold = infoLog
 
 // logtostderr    true 仅打印到控制台（默认），false：打印到控制台和文件，
 // stderrthreshold 修改成了 默认info级别，超过info级别的日志 打印到控制台
-// formatHeader() 修改为 2017-06-01 15:57:20 INFO test_log.go:22 - message  格式
+// formatHeader() 修改为 INFO 2017-06-01 15:57:20 test_log.go:22 - message  格式
+// warning -> warn， 取消 warnf等操作
 
 // SetLogging**() 设置打印参数，如logtostderr等， 覆盖命令行参数
 
@@ -21,18 +22,17 @@ import (
 func main() {
 	flag.Parse() // 解析命令行参数， 如 -log_dir=/data/logs/go，-logtostderr=false
 
-	defer glog.Flush() // 推荐，防止日志没有写完进程结束
+	//退出时调用，确保日志写入文件中
+	defer glog.Flush()
 
-	//glog.SetLoggingLogtostderr(true)
+	glog.Info("hello, glog")
+	glog.Warning("warning glog")
+	glog.Error("error glog")
 
-	glog.Info("info message")
-	glog.Warning("warn message")
-	glog.Error("error message")
+	glog.Info("info %d", 1)
+	glog.Warning("warning %d", 2)
+	glog.Error("error %d", 3)
 
-	if glog.V(2) {
-		glog.Warning("warn2 message")
-	}
 
-	glog.V(2).Info("info2 message")
 
 }

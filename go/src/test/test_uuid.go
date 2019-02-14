@@ -1,16 +1,27 @@
 package main
 
-
-// 安装：go get github.com/nu7hatch/gouuid
+// 安装：go get github.com/satori/go.uuid
 import (
 	"fmt"
-	"github.com/nu7hatch/gouuid"
+	"github.com/satori/go.uuid"
+	"strings"
 )
 
 func main() {
 	u, err := uuid.NewV4()
 	if err == nil {
 		fmt.Println(u.String())
-		fmt.Println(u.String2())
 	}
+
+	fmt.Println(UUID())
+}
+
+func UUID() string {
+	u, err := uuid.NewV4()
+	if err != nil {
+		fmt.Println("generate uuid err:" + err.Error())
+	}
+
+	uuid := u.String()
+	return strings.Replace(uuid, "-", "", -1)
 }
