@@ -5,7 +5,10 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"time"
 )
+
+const timeout = 10 * time.Second
 
 // resp.Cookies() 可以获取返回的cookie
 func Get(url0 string) (string, error) {
@@ -44,7 +47,9 @@ func GetWithHeaderAndCookie(url0 string, header, cookie map[string]string) (stri
 		req.Header.Set("cookie", cookieStr)
 	}
 
-	client := &http.Client{}
+	client := &http.Client{
+		Timeout: timeout,
+	}
 
 	resp, err := client.Do(req)
 	if err != nil {
@@ -115,7 +120,9 @@ func PostForm(url string, params map[string]string, header map[string]string) (s
 		}
 	}
 
-	client := &http.Client{}
+	client := &http.Client{
+		Timeout: timeout,
+	}
 
 	resp, err := client.Do(req)
 	if err != nil {
@@ -135,7 +142,9 @@ func PostRawData(url0 string, data string) (string, error) {
 		return "", err
 	}
 
-	client := &http.Client{}
+	client := &http.Client{
+		Timeout: timeout,
+	}
 
 	resp, err := client.Do(req)
 	if err != nil {
