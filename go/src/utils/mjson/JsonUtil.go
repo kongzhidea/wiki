@@ -15,21 +15,21 @@ func Encode(obj interface{}) (string, error) {
 
 // json中int会转成 float64类型，需要注意
 func DecodeMap(s string) (map[string]interface{}, error) {
-	var f interface{}
+	var f map[string]interface{}
 	err := json.Unmarshal([]byte(s), &f)
 	if err != nil {
 		return nil, err
 	}
-	return f.(map[string]interface{}), nil
+	return f, nil
 }
 
 func DecodeArray(s string) ([]interface{}, error) {
-	var f interface{}
+	var f []interface{}
 	err := json.Unmarshal([]byte(s), &f)
 	if err != nil {
 		return nil, err
 	}
-	return f.([]interface{}), nil
+	return f, nil
 }
 
 // ------------------------------------------------------------------
