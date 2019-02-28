@@ -22,10 +22,22 @@ func DecodeMap(s string) (map[string]interface{}, error) {
 	}
 	return f, nil
 }
-
 func DecodeArray(s string) ([]interface{}, error) {
 	var f []interface{}
 	err := json.Unmarshal([]byte(s), &f)
+	if err != nil {
+		return nil, err
+	}
+	return f, nil
+}
+
+// int ,float 会转为 json.Number 类型
+func DecodeMap2(s string) (map[string]interface{}, error) {
+	decoder1 := json.NewDecoder(bytes.NewBufferString(s))
+	decoder1.UseNumber()
+
+	var f map[string]interface{}
+	err := decoder1.Decode(&f)
 	if err != nil {
 		return nil, err
 	}
