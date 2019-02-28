@@ -13,7 +13,7 @@ func Encode(obj interface{}) (string, error) {
 	return string(b), nil
 }
 
-// json中int会转成 float64类型，需要注意
+// json中int会转成 float64类型，需要注意，long型可能会有精度丢失。
 func DecodeMap(s string) (map[string]interface{}, error) {
 	var f map[string]interface{}
 	err := json.Unmarshal([]byte(s), &f)
