@@ -1,4 +1,5 @@
 
+## [awesome-mac](https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md)
 
 ## 1. bash_profile 
 * 见.bash_profile
