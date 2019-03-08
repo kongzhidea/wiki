@@ -1,7 +1,9 @@
 package JsonUtil
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 	"strconv"
 )
 
@@ -11,6 +13,15 @@ func Encode(obj interface{}) (string, error) {
 		return "", err
 	}
 	return string(b), nil
+}
+
+func EncodeIgnoreErr(obj interface{}) string {
+	b, err := json.Marshal(obj)
+	if err != nil {
+		fmt.Printf("encode json error,erro=" + err.Error())
+		return ""
+	}
+	return string(b)
 }
 
 // json中int会转成 float64类型，需要注意，long型可能会有精度丢失。
@@ -189,7 +200,6 @@ func (j Js) ToString() string {
 func (j Js) ToFloat() float64 {
 	return j.Data.(float64)
 }
-
 
 func (j Js) ToInt() int {
 	return toInt(j.Data)

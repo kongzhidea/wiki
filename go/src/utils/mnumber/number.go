@@ -15,6 +15,14 @@ func FormatInt(data int64) string {
 	return result
 }
 
+func ParseFloat64(data string) float64 {
+	result, err := strconv.ParseFloat(data, 64)
+	if err != nil {
+		return 0
+	}
+	return result
+}
+
 func JoinInt64(a []int64, sep string) string {
 	switch len(a) {
 	case 0:

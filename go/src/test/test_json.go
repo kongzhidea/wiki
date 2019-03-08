@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"utils/mjson"
 	"reflect"
+	"utils/mjson"
 )
 
 // 如果是struct类型，字段需要是public类型，即首字母大写，否则无法转成json。
@@ -32,6 +32,7 @@ func main() {
 	// encode
 	jsonstr, _ := JsonUtil.Encode(dict)
 	fmt.Println(jsonstr)
+	fmt.Println(JsonUtil.EncodeIgnoreErr(dict))
 
 	fmt.Println(JsonUtil.Encode(Response1{1, []string{"s1", "s2"}}))
 	fmt.Println(JsonUtil.Encode(&Response1{1, []string{"s1", "s2"}}))
@@ -77,9 +78,9 @@ func main() {
 	fmt.Println(obj.GetArray("array")[0].(string))
 
 	arr := obj.Get("array")
-	fmt.Println(",,,,,",arr.GetArrayIndex(1).Data.(string))
-	fmt.Println(",,,,,",arr.GetArrayIndex(1).ToString())
-	fmt.Println(",,,,,",arr.GetArrayIndex(0).ToInt())
+	fmt.Println(",,,,,", arr.GetArrayIndex(1).Data.(string))
+	fmt.Println(",,,,,", arr.GetArrayIndex(1).ToString())
+	fmt.Println(",,,,,", arr.GetArrayIndex(0).ToInt())
 	fmt.Println(arr.GetArrayIndex(2).ToMapData())
 	fmt.Println(arr.GetArrayIndexString(1))
 	fmt.Println(arr.GetArrayIndexInt(0))
