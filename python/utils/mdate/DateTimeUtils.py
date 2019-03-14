@@ -47,7 +47,7 @@ def defaultTime(date=None):
     if date:
         return date.strftime("%Y-%m-%d %H:%M:%S")
     else:
-        return datetime.date.today().strftime("%Y-%m-%d %H:%M:%S")
+        return datetime.datetime.today().strftime("%Y-%m-%d %H:%M:%S")
 
 
 # date为datetime或date类型，返回str
