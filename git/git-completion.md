@@ -1,7 +1,7 @@
 ### 在mac终端上 git没有自动补全功能，需要手动加上此功能
 
 
-
+## bash环境：
 #### 1. 下载Git-completion.bash
 * github地址：https://github.com/markgandolfo/git-bash-completion.git
 
