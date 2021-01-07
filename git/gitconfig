@@ -1,3 +1,5 @@
+文件地址：.gitconfig
+
 [alias]
 	co = checkout
 	br = branch
