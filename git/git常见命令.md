@@ -285,3 +285,6 @@ git revert 和 git reset的区别
 
 
 ## [Removing sensitive data from a repository](https://help.github.com/articles/removing-sensitive-data-from-a-repository/)
+
+## git删除历史已提交目录，减少仓库大小
+* git rm -r folder
