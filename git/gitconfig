@@ -1,0 +1,9 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = log -1 HEAD
+	push2review = push origin HEAD:kongzhihui
+	rt = reset --hard HEAD
+	pl = pull --rebase
