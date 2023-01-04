@@ -8,6 +8,8 @@ import (
 	"time"
 )
 
+// http 2.0 使用见：https://www.yuque.com/u47814/golang/svz66tcs41ygxbd3
+
 const timeout = 10 * time.Second
 
 // resp.Cookies() 可以获取返回的cookie
